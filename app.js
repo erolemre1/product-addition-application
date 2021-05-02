@@ -1,35 +1,42 @@
-
+let imageUrl;
 
 document.querySelector("#productform").addEventListener("submit",
 function (e) {
+    
+    const productname =document.querySelector ("#productname").value;
+    const productmodel =document.querySelector ("#productmodel").value;
+    const productprice =document.querySelector ("#productprice").value;  
 
+    const product = new Products(productname, productmodel, productprice);
+    const ui = new UI ();
 
-  
-const productname =document.querySelector ("#productname").value;
-const productmodel =document.querySelector ("#productmodel").value;
-const productprice =document.querySelector ("#productprice").value;   
+    if(productname == "" || productprice == "" || productmodel == "" ){
+        ui.alerts("Boş alan bırakmayınız !", "error")
+    }else{
+        ui.productadd(product);
 
+        ui.alerts("Ürün Ekleme Başarılı!", "confirmation")
+    ui.formclean();
 
-const product = new Products(productname, productmodel, productprice, openFile);
-const ui = new UI ();
+    }
 
-if(productname == "" || productprice == "" || productmodel == ""  ){
-    ui.alerts("Boş alan bırakmayınız !", "error")
-}else{
-    ui.productadd(product);
-
-    ui.alerts("Ürün Ekleme Başarılı!", "confirmation")
-ui.formclean();
-
-}
-
-
-
-
-e.preventDefault();
+    e.preventDefault();
 })
 
+var openFile = function(event) {
+    var input = event.target;
 
+    var reader = new FileReader();
+    reader.onload = function(){
+
+    var dataURL = reader.result;
+    console.log('dataURL', dataURL)
+
+    imageUrl = dataURL;
+
+};
+    reader.readAsDataURL(input.files[0]);
+};
 
 
 
@@ -50,7 +57,7 @@ UI.prototype.productadd = function (product){
 
 
     const ull= document.createElement("ul");
-    ull.innerHTML =`<li><img id='output' src="dataURL"/></li><li>${product.productname}</li> <li>${product.productmodel}</li><li>${product.productprice}</li><i class="fas fa-trash-alt" id="icons"></i></li>`;
+    ull.innerHTML =`<li><img id='output' src=${imageUrl} /></li><li>${product.productname}</li> <li>${product.productmodel}</li><li>${product.productprice}</li><i class="fas fa-trash-alt" id="icons"></i></li>`;
 list.appendChild(ull);
 }
 
