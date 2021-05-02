@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Product</title>
+ 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+    
+</head>
+<body>
+    <ul class="icons">
+        <li>
+            <a href="https://www.instagram.com/emregulec._/?hl=tr" target="_blank"><i class="fab fa-instagram"></i></a>
+        </li>
+       
+        <li>
+            <a href="https://twitter.com/ErolEmreGle1 " target="_blank"> <i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/emre-g%C3%BCle%C3%A7-5429b8210/" target="_blank"><i class="fab fa-linkedin"></i> </a>
+        </li>
+        <li>
+            <a href="https://github.com/erolemre1" target="_blank"> <i class="fab fa-github"></i></a>
+        </li>
+    </ul>
+
+   
+    
+    <form action="#" id="productform"> 
+        <input  type='file' class="fileinput" accept='image/*' onchange='openFile(event)'id="productimage" >
+        <input type="text" placeholder="Ürün Adı" id="productname"/>
+        <input type="text" id="productmodel" placeholder="Ürün Model"/>
+        <input type="text" id="productprice" placeholder="Ürün Fiyat"/>
+        <button type="submit"  id="submit" onclick="start">EKLE</button>
+        
+        </form>
+
+        <div id="productlist">
+
+            <nav class="productlistheader">
+          
+            <ul>
+            <li>Resim</li> 
+            <li>Marka</li> 
+            <li>Model</li>
+            <li>Fiyat</li>
+            <li>Sil</li>
+            
+            </ul>
+            
+            </nav>
+            
+           
+           
+            </div>
+            <nav class="productlists">  </nav>
+           
+         
+        <script src="./app.js"></script>
+        <script src="./file.js"></script>
+       
+    </body>
+</html>
