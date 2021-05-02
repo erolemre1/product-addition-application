@@ -19,13 +19,20 @@ body{
     background: #ebebee;
 
 }
+h1{
+    color: seagreen;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+   margin-left: 100px;
+}
 
 .icons{
     font-size: 35px;
     
     list-style: none;
     align-self: center;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     justify-content: flex-end;
     letter-spacing: 2rem;
@@ -151,6 +158,15 @@ color: #fff;
 font-weight: bold;
 font-size: 19px;
 margin-bottom: 15px;
+}
+.deletes{
+    background: green;
+padding: 10px;
+color: #fff;
+font-weight: bold;
+font-size: 19px;
+margin-bottom: 15px;
+
 }
 
 #output{

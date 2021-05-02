@@ -1,0 +1,12 @@
+h1{
+    color: red;
+}
+
+h2{background-color: aqua;
+color: red ;}
+
+#logo {
+    color: blue;
+    background-color: red;
+    font-size: xx-large;
+}

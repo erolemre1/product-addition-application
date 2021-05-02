@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablo</title>
+
+    <style>
+        /* table{
+            font-weight: bold;
+           
+         text-transform: uppercase;
+        border:  2px solid black;
+        } */
+
+table,tr,td,th{
+    
+    font-weight: bold;
+           
+           text-transform: uppercase;
+          border:  2px solid black;
+          cursor: pointer;
+       
+        
+}
+table{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+th,td{
+    padding:10px;
+}
+thead tr{
+  background: seagreen;
+  color: white;
+}
+
+table:hover{
+    color: red;
+}
+table:active{
+    background: blue;
+}
+tbody tr{
+    text-align: center;
+    
+}
+tbody tr :nth-child(n){
+    background: #a7a7a7;
+}
+
+    </style>
+    
+</head>
+<body>
+   
+
+    
+        <table>
+            <!-- TABLO OLUŞTURMAK İÇİN TABLE  -->
+            <thead>
+<tr>
+
+<th>ad</th>
+<th>departmant</th>
+<th>maaş</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+    
+        <tr>
+<th>emre</th>
+<th>bilişim</th>
+<th>50.000</th>
+  </tr>
+    
+        <tr>
+<th>emre</th>
+<th>bilişim</th>
+<th>50.000</th>
+  </tr>
+  
+        <tr>
+<th>emre</th>
+<th>bilişim</th>
+<th>50.000</th>
+  </tr>
+</tbody>
+    </table>
+    
+    </body>
+</html>

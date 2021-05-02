@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <style>
+        .outherbox
+        {
+            width: 200px;
+            height: 200px;
+            background: #a7a7a7; 
+            /* position absolute çalıması için
+            relative yada fixed verilmeli */
+            position:relative ;
+            left: 50px;
+            top: 300px;
+
+        }
+        .innerbox
+        {
+            width: 50px;
+            height: 50px;
+            background: blue;
+            /* absolute kapsayıcıya
+             göre konumlandrıma */
+           position: absolute;
+           top: 10px;
+           left: 10px; 
+        }
+/*    */ 
+span{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: red;
+    position: relative;
+    left: 90px;
+ /* kutuyu arka plana alma z index*/ 
+ z-index: -1;
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- kapsayıcı olması için iki divi iç içe yazılmalı -->
+<div class="outherbox">
+<div class="innerbox"></div>
+
+
+
+</div>
+
+<!--  -->
+<span></span>
+
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, perferendis.
+</body>
+</html>

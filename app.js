@@ -57,7 +57,7 @@ UI.prototype.productadd = function (product){
 
 
     const ull= document.createElement("ul");
-    ull.innerHTML =`<li><img id='output' src=${imageUrl} /></li><li>${product.productname}</li> <li>${product.productmodel}</li><li>${product.productprice}</li><i class="fas fa-trash-alt" id="icons"></i></li>`;
+    ull.innerHTML =`<li><a href=${imageUrl} rel="lightbox [group]"> <img id='output'src=${imageUrl} /></a></li><li>${product.productname}</li> <li>${product.productmodel}</li><li>${product.productprice}</li><i class="fas fa-trash-alt" id="icons"></i></li>`;
 list.appendChild(ull);
 }
 
@@ -102,10 +102,13 @@ document.querySelector(".productlists").addEventListener("click", function(e){
    
 
   const ui = new UI();
-
+ 
   ui.productlistsdelete(e.target);
-  
+  ui.alerts("Silme İşlemi Başarılı!", "deletes");  
+   
+
     e.preventDefault();
+    
 });
 
 

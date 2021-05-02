@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 2</title>
+    <style>
+        body{
+            overflow: scroll;
+        }
+        .red{
+            width: 200px;
+            height: 200px;
+            background: red ;
+            /* position relative bulunduğu yerden
+             pozisyon verme yerinin değiştirme*/
+            position: relative;
+            top: 150px;
+            left: 90px ;
+            cursor: pointer;
+            border: 5px solid black;
+            border-radius: 20px;
+            /* z index hangisinin önde
+             olmasına karar veriyor 1 önde olan
+             */
+            z-index: 1;
+           
+        }
+        .blue{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            left: 120px;
+            top: 100px;
+            background: blue;
+            cursor: pointer;
+            border: 5px solid black;
+            border-radius: 200px;
+           
+        }
+        a{
+            position: relative;
+            top: 900px;
+        }
+        .red:hover{
+            background: blue;
+        }
+        .blue:hover{
+            background: red;
+        }
+        .blue:active{
+            background: black;
+        }
+        .red:active{
+            background: black;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="red"></div> <br>
+    <div class="blue"></div>
+    <a href="#">Boş link</a>
+</body>
+</html>
